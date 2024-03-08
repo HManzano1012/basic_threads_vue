@@ -3,12 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "serve": "nuxt dev",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  
   "dependencies": {
     "@vueuse/core": "^10.9.0",
     "class-variance-authority": "^0.7.0",
