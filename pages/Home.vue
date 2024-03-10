@@ -9,12 +9,242 @@
   </div>
   <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
     <p class="text-sm leading-6 text-white">
-      <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next.
+      <strong class="font-semibold">Basic Threads 2024</strong><svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>La mejor tienda de ropa en el país – te estamos esperando!
     </p>
     
   </div>
   <div class="flex flex-1 justify-end">
  
+  </div>
+</div><br><br><br>
+
+
+
+
+
+
+<div class="container mx-auto px-4 py-8"><hr><br><br>
+
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+
+    <!-- Card 1 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Card 5 -->
+     <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Card 8 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+      <img src="https://via.placeholder.com/150" alt="Placeholder" class="w-full h-43 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold text-white">Card 1</h3><br>
+        <p class="text-sm text-white">Description for card 1</p><hr>
+        <div class="mt-4 flex justify-between">
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Añadir 
+      </NuxtLink></button>
+          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+        Comprar
+      </NuxtLink></button>
+        </div>
+      </div>
+    </div>
+
+
+  </div><br><br><br><br><br><hr>
+  <div class="bg-gray-100">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+      <h2 class="text-2xl font-bold text-gray-900">Recomendaciones</h2>
+
+      <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+        <!-- Card 1 -->
+        <div class="group relative">
+          <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+            <img src="https://via.placeholder.com/400x250" alt="Placeholder" class="h-full w-full object-cover object-center" />
+          </div>
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">Collection 1</a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Description for Collection 1</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative">
+          <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+            <img src="https://via.placeholder.com/400x250" alt="Placeholder" class="h-full w-full object-cover object-center" />
+          </div>
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">Collection 2</a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Description for Collection 2</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative">
+          <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+            <img src="https://via.placeholder.com/400x250" alt="Placeholder" class="h-full w-full object-cover object-center" />
+          </div>
+          <h3 class="mt-6 text-sm text-gray-500">
+            <a href="#">Collection 3</a>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">Description for Collection 3</p>
+        </div>
+        
+        
+
+
+      </div>
+    </div>
   </div>
 </div>
 
@@ -22,31 +252,27 @@
 
 
 
-    <div class="bg-white">
-      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+
+
+
+
+
   
-        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-          <div v-for="product in products" :key="product.id" class="group relative">
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-              <img :src="product.imageSrc" :alt="product.imageAlt" class="h-full w-full object-cover object-center lg:h-full lg:w-full" />
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a :href="product.href">
-                    <span aria-hidden="true" class="absolute inset-0" />
-                    {{ product.name }}
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">{{ product.color }}</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">{{ product.price }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
   </template>
   
   <script setup>
@@ -63,3 +289,4 @@
     // More products...
   ]
   </script>
+
