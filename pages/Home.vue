@@ -1,4 +1,7 @@
+
 <template>
+
+
 
 <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-black px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
   <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
@@ -23,18 +26,7 @@
 <br><br>
 
 
-
-
-
-
 <div class="container mx-auto px-4 py-8 ">
-
-  
-
-
-
-
-
 
 
 <hr><br><br>
@@ -47,16 +39,16 @@
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
 
     <!-- Card 1 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
-      <img src="../assets/css/img/CH1.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
+      <img src="../assets/css/img/CH1.jpg" alt="Placeholder" class="w-full h-100 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Camisa Warning</h3><br>
-        <p class="text-sm text-white">$9.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Camisa Warning</h3><br>
+        <p class="text-sm text-black">$9.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -64,16 +56,16 @@
     </div>
 
     <!-- Card 2 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/CH2.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Camisa blanca</h3><br>
-        <p class="text-sm text-white">$9.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Camisa blanca</h3><br>
+        <p class="text-sm text-black">$9.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -81,16 +73,16 @@
     </div>
 
     <!-- Card 3 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/CH3.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Camisa verde</h3><br>
-        <p class="text-sm text-white">$9.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Camisa verde</h3><br>
+        <p class="text-sm text-black">$9.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -98,16 +90,16 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md ">
       <img src="../assets/css/img/CH4.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Camisa Negra</h3><br>
-        <p class="text-sm text-white">$9.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Camisa Negra</h3><br>
+        <p class="text-sm text-black">$9.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -116,16 +108,16 @@
 
 
      <!-- Card 5 -->
-     <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+     <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/CH5.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Camisa manga larga</h3><br>
-        <p class="text-sm text-white">$19.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Camisa manga larga</h3><br>
+        <p class="text-sm text-black">$19.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -133,16 +125,16 @@
     </div>
 
     <!-- Card 6 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/F1.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Falda</h3><br>
-        <p class="text-sm text-white">$12.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Falda</h3><br>
+        <p class="text-sm text-black">$12.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -150,16 +142,16 @@
     </div>
 
     <!-- Card 7 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/P1.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Pantalon Negro</h3><br>
-        <p class="text-sm text-white">$19.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Pantalon Negro</h3><br>
+        <p class="text-sm text-black">$19.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -168,16 +160,16 @@
 
 
     <!-- Card 8 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/PRENDA1.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Overall</h3><br>
-        <p class="text-sm text-white">$9.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Overall</h3><br>
+        <p class="text-sm text-black">$9.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -185,16 +177,16 @@
     </div>
 
     <!-- Card 9 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black shadow-md">
       <img src="../assets/css/img/V1.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Vestido</h3><br>
-        <p class="text-sm text-white">$19.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Vestido</h3><br>
+        <p class="text-sm text-black">$19.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -202,16 +194,16 @@
     </div>
 
     <!-- Card 10 -->
-    <div class="bg-black rounded-lg overflow-hidden shadow-md ">
+    <div class="bg-white rounded-lg overflow-hidden border border-black ">
       <img src="../assets/css/img/H4.jpg" alt="Placeholder" class="w-full h-43 object-cover" />
       <div class="p-4">
-        <h3 class="text-lg font-semibold text-white">Hoodie Blanco</h3><br>
-        <p class="text-sm text-white">$14.99</p><hr>
+        <h3 class="text-lg font-semibold text-black">Hoodie Blanco</h3><br>
+        <p class="text-sm text-black">$14.99</p><hr>
         <div class="mt-4 flex justify-between">
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Añadir 
       </NuxtLink></button>
-          <button class="bg-white text-black px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
+          <button class="bg-black text-white px-4 py-2 rounded-md"><NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
         Comprar
       </NuxtLink></button>
         </div>
@@ -293,6 +285,18 @@
 
 
   </template>
+
+
+<style>
+
+#card1{
+  border-color: black;
+}
+
+</style>
+
+
+
   
   <script setup>
   const products = [
