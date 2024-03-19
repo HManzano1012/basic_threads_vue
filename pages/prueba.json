@@ -1,0 +1,42 @@
+[
+    {
+        "Nombre" : "Camisa Warning",
+        "Precio" : 9.99
+    },
+    {
+        "Nombre" : "Camisa Blanca",
+        "Precio" : 8.99
+    },
+    {
+        "Nombre" : "Camisa Verde",
+        "Precio" : 10.99
+    },
+    {
+        "Nombre" : "Camisa Negra",
+        "Precio" : 7.00
+    },
+    {
+        "Nombre" : "Camisa Manga larga",
+        "Precio" : 15.00
+    },
+    {
+        "Nombre" : "Falda",
+        "Precio" : 6.00
+    },
+    {
+        "Nombre" : "Pantalon negro",
+        "Precio" : 20.00
+    },
+    {
+        "Nombre" : "Overall",
+        "Precio" : 13.00
+    },
+    {
+        "Nombre" : "Vestido",
+        "Precio" : 8.50
+    },
+    {
+        "Nombre" : "Hoddie blanco",
+        "Precio" : 15.00
+    }
+]
