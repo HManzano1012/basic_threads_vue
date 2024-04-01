@@ -49,69 +49,18 @@ onMounted(() => {
       </button>
       <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
         >
           <li>
             <NuxtLink
               to="/login"
-              class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
               aria-current="page"
             >
               Home
             </NuxtLink>
           </li>
           <!-- Iniciar -->
-          <li>
-            <button
-              id="dropdownNavbarLinkIniciar"
-              data-dropdown-toggle="dropdownNavbarIniciar"
-              class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-            >
-              Iniciar
-              <svg
-                class="w-2.5 h-2.5 ms-2.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div
-              id="dropdownNavbarIniciar"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-            >
-              <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                aria-labelledby="dropdownLargeButton"
-              >
-                <li>
-                  <NuxtLink
-                    to="/register"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Crear Cuenta
-                  </NuxtLink>
-                </li>
-              </ul>
-              <div class="py-1">
-                <NuxtLink
-                  to="/login"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                >
-                  Login
-                </NuxtLink>
-              </div>
-            </div>
-          </li>
 
           <!-- Categorias -->
           <!-- Si deseo cambiar agregar uno mas, debo cambiar el nombre del id del boton, el data-dropdown-toggle y el id del Dropdown menu-->
@@ -119,7 +68,7 @@ onMounted(() => {
             <button
               id="dropdownNavbarLinkCategorias"
               data-dropdown-toggle="dropdownNavbarCategorias"
-              class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
             >
               Categorías
               <svg
@@ -231,9 +180,60 @@ onMounted(() => {
           <li>
             <a
               href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
               >Contact</a
             >
+          </li>
+          <li>
+            <button
+              id="dropdownNavbarLinkIniciar"
+              data-dropdown-toggle="dropdownNavbarIniciar"
+              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
+            >
+              Iniciar
+              <svg
+                class="w-2.5 h-2.5 ms-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              id="dropdownNavbarIniciar"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                aria-labelledby="dropdownLargeButton"
+              >
+                <li>
+                  <NuxtLink
+                    to="/register"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Crear Cuenta
+                  </NuxtLink>
+                </li>
+              </ul>
+              <div class="py-1">
+                <NuxtLink
+                  to="/login"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >
+                  Login
+                </NuxtLink>
+              </div>
+            </div>
           </li>
         </ul>
       </div>

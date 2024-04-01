@@ -1,54 +1,97 @@
+<script setup>
+import { ref } from "vue";
+</script>
+
 <template>
-
-
-<br><br><br><br>
-
-<div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 ">
-
-
-
-    <div class="sm:mx-auto sm:w-full sm:max-w-sm ">
-   
-      <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-black">Inicio de Sesión</h2>
+  <div class="my-16 py-16">
+    <div>
+      <h2 class="text-center text-2xl font-semibold text-gray-800">
+        Inicio de Sesión
+      </h2>
     </div>
-
-    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
-      <form class="space-y-6" action="#" method="POST">
+    <div class="mt-6 mx-auto w-full max-w-sm">
+      <form @submit.prevent="login">
+        <div id="error-alert"></div>
         <div>
-          <label for="email" class="block text-sm font-medium leading-6 text-black">Correo electrónico</label>
-          <div class="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-          </div>
-        </div><br>
-
+          <label for="email" class="mt-3">Correo electrónico</label>
+          <input
+            id="email"
+            ref="email"
+            name="email"
+            type="email"
+            placeholder="Ingresa tu correo electrónico"
+            required="true"
+            class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            @focus="hideAlert"
+          />
+        </div>
         <div>
-          <div class="flex items-center justify-between">
-            <label for="password" class="block text-sm font-medium leading-6 text-black">Contraseña</label>
-            
-          </div>
-          <div class="mt-2">
-            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-          </div>
-        </div><br>
+          <label for="password" class="mt-3">Contraseña</label>
+          <input
+            id="password"
+            name="password"
+            ref="password"
+            type="password"
+            placeholder="Ingresa tu contraseña"
+            required="true"
+            class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            @focus="hideAlert"
+          />
+        </div>
 
-        <button type="submit" class="flex w-full justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm transition-transform hover:scale-105  ">
-            Enviar
+        <button
+          type="submit"
+          class="w-full rounded-md bg-black px-3 py-1.5 my-3 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105"
+        >
+          Enviar
         </button>
-        <hr><br>
       </form>
-
-      <NuxtLink to="/Form_login" class="n-link-base flex items-center justify-center transition-transform hover:scale-105 ">
-        No tienes una cuenta? ¡Ingresa aquí!
+      No tienes una cuenta?
+      <NuxtLink to="/register" class="text-blue-400 hover:text-gray-400">
+        ¡Registrate aquí!
       </NuxtLink>
-
     </div>
   </div>
-  
-
-  
-  <br><br><br><br><br><br><br><br>
-
-
 </template>
 
+<script>
+export default {
+  methods: {
+    hideAlert() {
+      document.getElementById("error-alert").innerHTML = "";
+    },
+    login() {
+      let email = this.$refs.email.value;
+      let password = this.$refs.password.value;
 
+      const formdata = new FormData();
+      formdata.append("email", email);
+      formdata.append("password", password);
+
+      const requestOptions = {
+        method: "POST",
+        body: formdata,
+        redirect: "follow",
+      };
+
+      fetch("http://localhost:1323/login", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          let response = JSON.parse(result);
+          if (response.status == "success") {
+            localStorage.setItem("token", response.token);
+            this.$router.push("/");
+          } else {
+            let alert =
+              '<div class="flex items-center bg-red-400 text-white text-sm font-bold px-4 py-3" role="alert">\
+  <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/></svg>\
+  <p>Credenciales Invalidas</p>\
+</div>';
+
+            document.getElementById("error-alert").innerHTML = alert;
+          }
+        });
+    },
+  },
+};
+</script>
