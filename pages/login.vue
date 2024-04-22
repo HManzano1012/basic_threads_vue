@@ -17,6 +17,7 @@ import { ref } from "vue";
           <input
             id="email"
             ref="email"
+            j
             name="email"
             type="email"
             placeholder="Ingresa tu correo electrónico"
@@ -34,7 +35,7 @@ import { ref } from "vue";
             type="password"
             placeholder="Ingresa tu contraseña"
             required="true"
-            class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            class="shadow appearance-non border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             @focus="hideAlert"
           />
         </div>
