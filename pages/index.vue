@@ -1,9 +1,11 @@
 <template>
+
+
   <div
     class="relative isolate flex items-center gap-x-6 overflow-hidden bg-black px-6 py-2.5 sm:px-3.5 sm:before:flex-1"
   >
     <div
-      class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+      class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl "
       aria-hidden="true"
     >
       <div
@@ -73,42 +75,45 @@
     <div class="flex flex-1 justify-end"></div>
   </div>
 <!-- Cards -->
-  <div class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-      <div
-        v-for="product in config.products"
-        :key="product.id"
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
-      >
-        <img
-          :src="'/img/' + product.Image"
-          :alt="product.Name"
-          class="h-60 w-full object-cover object-center"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">{{ product.Name }}</h3>
-          <p class="text-sm text-black">${{ product.Price }}</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/show"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/show"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
+  <div class="container mx-auto px-4 py-12 mt-12">
+      
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div
+            v-for="product in config.products"
+            :key="product.id"
+            class="bg-white rounded-lg overflow-hidden border border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
+          >
+          <NuxtLink to="show">
+            <img
+              :src="'/img/' + product.Image"
+              :alt="product.Name"
+              class="h-60 w-full object-cover object-center cursor-pointer"
+            />
+          </NuxtLink>
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-black">{{ product.Name }}</h3>
+              <p class="text-sm text-black">${{ product.Price }}</p>
+              <hr />
+              <div class="mt-4 flex justify-between">
+                <button class="bg-black text-white px-4 py-2 rounded-md">
+                  <NuxtLink
+                    to="login"
+                    class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
+                  >
+                    Añadir
+                  </NuxtLink>
+                </button>
+                <button class="bg-black text-white px-4 py-2 rounded-md">
+                  <NuxtLink
+                    to="/pages/show"
+                    class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
+                  >
+                    Comprar
+                  </NuxtLink>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
     </div>
     <br /><br /><br /><br /><br />
     <hr />
