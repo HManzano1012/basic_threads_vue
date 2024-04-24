@@ -72,341 +72,22 @@
     </div>
     <div class="flex flex-1 justify-end"></div>
   </div>
-  <br /><br /><br />
-
-  <br /><br />
 
   <div class="container mx-auto px-4 py-8">
-    <hr />
-    <br /><br />
-
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
-      <!-- Card 1 -->
       <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
+        v-for="product in config.products"
+        :key="product.id"
+        class="bg-white rounded-lg overflow-hidden border border-black shadow-md hover:shadow-lg transition-transform hover:scale-105"
       >
         <img
-          src="../assets/css/img/CH1.jpg"
-          alt="Placeholder"
-          class="w-full h-100 object-cover"
+          :src="'/img/' + product.Image"
+          :alt="product.Name"
+          class="h-48 w-full object-cover object-center"
         />
         <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Camisa Warning</h3>
-          <br />
-          <p class="text-sm text-black">$9.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/CH2.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Camisa blanca</h3>
-          <br />
-          <p class="text-sm text-black">$9.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/CH3.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Camisa verde</h3>
-          <br />
-          <p class="text-sm text-black">$9.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/CH4.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Camisa Negra</h3>
-          <br />
-          <p class="text-sm text-black">$9.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/CH5.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Camisa manga larga</h3>
-          <br />
-          <p class="text-sm text-black">$19.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/F1.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Falda</h3>
-          <br />
-          <p class="text-sm text-black">$12.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/P1.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Pantalon Negro</h3>
-          <br />
-          <p class="text-sm text-black">$19.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/PRENDA1.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Overall</h3>
-          <br />
-          <p class="text-sm text-black">$9.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 9 -->
-      <div
-        class="bg-white rounded-lg overflow-hidden border border-black shadow-md"
-      >
-        <img
-          src="../assets/css/img/V1.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Vestido</h3>
-          <br />
-          <p class="text-sm text-black">$19.99</p>
-          <hr />
-          <div class="mt-4 flex justify-between">
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Añadir
-              </NuxtLink>
-            </button>
-            <button class="bg-black text-white px-4 py-2 rounded-md">
-              <NuxtLink
-                to="/Form_login"
-                class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
-              >
-                Comprar
-              </NuxtLink>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 10 -->
-      <div class="bg-white rounded-lg overflow-hidden border border-black">
-        <img
-          src="../assets/css/img/H4.jpg"
-          alt="Placeholder"
-          class="w-full h-43 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-black">Hoodie Blanco</h3>
-          <br />
-          <p class="text-sm text-black">$14.99</p>
+          <h3 class="text-lg font-semibold text-black">{{ product.Name }}</h3>
+          <p class="text-sm text-black">${{ product.Price }}</p>
           <hr />
           <div class="mt-4 flex justify-between">
             <button class="bg-black text-white px-4 py-2 rounded-md">
@@ -508,18 +189,67 @@
 }
 </style>
 
-<script setup>
-const products = [
-  {
-    id: 1,
-    name: "Basic Tee",
-    href: "#",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-    imageAlt: "Front of men's Basic Tee in black.",
-    price: "$35",
-    color: "Black",
+<script>
+import { ref, onMounted } from "vue";
+export default {
+  props: {
+    products: Object,
   },
-  // More products...
-];
+  setup() {
+    const config = ref({
+      products: [],
+    });
+    onMounted(() => {
+      getProducts(config.value);
+    });
+
+    return { config, getProducts };
+  },
+  created() {},
+};
+
+function getProducts(config) {
+  // fetch("http://localhost:1323/products")
+  //   .then((response) => response.json())
+  //   .then((response) => {
+  //     config.products = response;
+  //     console.log(response);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error:", error);
+  //   });
+
+  let products = [
+    {
+      ID: 1,
+      Name: "Camisa polo negra",
+      Price: 20.99,
+      Description: "Camisa polo",
+      Image: "blackpolo.jpg",
+    },
+    {
+      ID: 2,
+      Name: "Camisa polo blanca",
+      Price: 19.96,
+      Description: "Camisa polo",
+      Image: "whitepolo.jpg",
+    },
+    {
+      ID: 3,
+      Name: "Camiseta azul TOMMy",
+      Price: 35.66,
+      Description: "Camiseta azul TOMMy",
+      Image: "blueshirttommy.jpg",
+    },
+    {
+      ID: 4,
+      Name: "Blusa Blanca Tommy",
+      Price: 30.89,
+      Description: "Blusa Blanca Tommy",
+      Image: "whiteshirttommy.jpg",
+    },
+  ];
+
+  config.products = products;
+}
 </script>

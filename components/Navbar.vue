@@ -53,7 +53,7 @@ onMounted(() => {
         >
           <li>
             <NuxtLink
-              to="/login"
+              to="/"
               class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
               aria-current="page"
             >
