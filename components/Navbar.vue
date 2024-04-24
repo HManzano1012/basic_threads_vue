@@ -98,7 +98,7 @@ onMounted(() => {
               >
                 <li>
                   <NuxtLink
-                    to="/login"
+                    to="/prendas/camisas"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Camisas
@@ -106,7 +106,7 @@ onMounted(() => {
                 </li>
                 <li>
                   <NuxtLink
-                    to="/login"
+                    to="/prendas/pantalones"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Pantalones
@@ -114,7 +114,7 @@ onMounted(() => {
                 </li>
                 <li>
                   <NuxtLink
-                    to="/register"
+                    to="/prendas/hoodies"
                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Hoddies
@@ -156,7 +156,7 @@ onMounted(() => {
                     >
                       <li>
                         <NuxtLink
-                          to="/Form_login"
+                          to="/prendas/invierno"
                           class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >
                           Invierno
@@ -164,7 +164,7 @@ onMounted(() => {
                       </li>
                       <li>
                         <NuxtLink
-                          to="/Form_login"
+                          to="/prendas/verano"
                           class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                         >
                           Verano

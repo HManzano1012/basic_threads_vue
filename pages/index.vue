@@ -72,7 +72,7 @@
     </div>
     <div class="flex flex-1 justify-end"></div>
   </div>
-
+<!-- Cards -->
   <div class="container mx-auto px-4 py-8">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
       <div
@@ -83,7 +83,7 @@
         <img
           :src="'/img/' + product.Image"
           :alt="product.Name"
-          class="h-48 w-full object-cover object-center"
+          class="h-60 w-full object-cover object-center"
         />
         <div class="p-4">
           <h3 class="text-lg font-semibold text-black">{{ product.Name }}</h3>
@@ -92,7 +92,7 @@
           <div class="mt-4 flex justify-between">
             <button class="bg-black text-white px-4 py-2 rounded-md">
               <NuxtLink
-                to="/Form_login"
+                to="/show"
                 class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
               >
                 Añadir
@@ -100,7 +100,7 @@
             </button>
             <button class="bg-black text-white px-4 py-2 rounded-md">
               <NuxtLink
-                to="/Form_login"
+                to="/show"
                 class="n-link-base flex items-center justify-center transition-transform hover:scale-105"
               >
                 Comprar
@@ -112,74 +112,32 @@
     </div>
     <br /><br /><br /><br /><br />
     <hr />
-    <div class="bg-gray-100">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 class="text-2xl font-bold text-gray-900">Recomendaciones</h2>
+      <!-- Recomendaciones -->
+      <div class="bg-gray-100">
+        
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-5">
+              <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
+                  <h2 class="text-2xl font-bold text-gray-900">Recomendaciones</h2>
 
-          <div
-            class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0"
-          >
-            <!-- Card 1 -->
-            <div class="group relative">
-              <div
-                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64"
-              >
-                <img
-                  src="../assets/css/img/H1.jpg"
-                  alt="Placeholder"
-                  class="h-full w-full object-cover object-center"
-                />
-              </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">Collection</a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Hoddie negro mujer
-              </p>
-            </div>
+                  <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                    <div v-for="recomendaciones in config.recomendaciones" :key="recomendaciones.id" class="bg-white rounded-lg overflow-hidden border border-gray shadow-md hover:shadow-lg transition-transform hover:scale-105">
+                      <div class="p-4">
+                        <h3 class="text-lg font-semibold text-black">{{ recomendaciones.Name }}</h3>
+                        <hr/>
 
-            <!-- Card 2 -->
-            <div class="group relative">
-              <div
-                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64"
-              >
-                <img
-                  src="../assets/css/img/H2.jpg"
-                  alt="Placeholder"
-                  class="h-full w-full object-cover object-center"
-                />
+                      </div>
+                      <img
+                        :src="'/img/' + recomendaciones.Image"
+                        :alt="recomendaciones.Name"
+                        class="h-48 w-full object-cover object-center"
+                      />
+                      <br>
+                    </div>
+                    
+                  </div>
               </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">Collection</a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Hoddie blanco hombre
-              </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="group relative">
-              <div
-                class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64"
-              >
-                <img
-                  src="../assets/css/img/H3.jpg"
-                  alt="Placeholder"
-                  class="h-full w-full object-cover object-center"
-                />
-              </div>
-              <h3 class="mt-6 text-sm text-gray-500">
-                <a href="#">Collection </a>
-              </h3>
-              <p class="text-base font-semibold text-gray-900">
-                Hoddie negro hombre
-              </p>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -194,13 +152,16 @@ import { ref, onMounted } from "vue";
 export default {
   props: {
     products: Object,
+    recomendaciones: Object,
   },
   setup() {
     const config = ref({
       products: [],
+      recomendaciones: [],
     });
     onMounted(() => {
       getProducts(config.value);
+      getRecomendaciones(config.value);
     });
 
     return { config, getProducts };
@@ -218,6 +179,7 @@ function getProducts(config) {
   //   .catch((error) => {
   //     console.error("Error:", error);
   //   });
+  
 
   let products = [
     {
@@ -248,8 +210,108 @@ function getProducts(config) {
       Description: "Blusa Blanca Tommy",
       Image: "whiteshirttommy.jpg",
     },
+    {
+      ID: 5,
+      Name: "Camisa Vestir Rayas",
+      Price: 15.99,
+      Image: "camisa1.jpg",
+    },
+    {
+      ID: 6,
+      Name: "Camisa de Playa",
+      Price: 10.99,
+      Image: "camisa2.jpg",
+    },
+    {
+      ID: 7,
+      Name: "Camisa Vestir  Negra",
+      Price: 15.89,
+      Image: "camisa3.jpg",
+    },
+    {
+      ID: 8,
+      Name: "Camisa Negra",
+      Price: 30.89,
+      Image: "camisa4.jpg",
+    },
+    {
+      ID: 9,
+      Name: "Camisa Manga Larga ",
+      Price: 30.89,
+      Image: "camisa5.jpg",
+    },
+    {
+      ID: 10,
+      Name: "Camisa Vestir Old",
+      Price: 30.89,
+      Image: "camisa6.jpg",
+    },
+    {
+      ID: 11,
+      Name: "Camisa Warning",
+      Price: 30.89,
+      Image: "CH1.jpg",
+    },
+    {
+      ID: 12,
+      Name: "Blusa Blanca",
+      Price: 15.89,
+      Image: "CH2.jpg",
+    },
+    {
+      ID: 13,
+      Name: "Hoodie Spiderman",
+      Price: 30.89,
+      Image: "hoodie1.jpg",
+    },
+    {
+      ID: 14,
+      Name: "Pantalon Blanco",
+      Price: 30.89,
+      Image: "pantalon1.jpg",
+    },
+    {
+      ID: 15,
+      Name: "Pantalon Vestir",
+      Price: 30.89,
+      Image: "pantalon2.jpg",
+    },
+
   ];
 
   config.products = products;
 }
+function getRecomendaciones(config) {
+  // fetch("http://localhost:1323/products")
+  //   .then((response) => response.json())
+  //   .then((response) => {
+  //     config.products = response;
+  //     console.log(response);
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error:", error);
+  //   });
+
+  let recomendaciones = [
+    {
+      ID: 1,
+      Name: "Hoodies Collections",
+      Image: "hoodiesC.jpg",
+    },
+    {
+      ID: 2,
+      Name: "Camisas Collections",
+      Image: "camisasC.jpg",
+    },
+    {
+      ID: 3,
+      Name: "Pantalones Collections",
+      Image: "pantalonesC.jpg",
+    },
+
+  ];
+
+  config.recomendaciones = recomendaciones;
+}
+
 </script>
