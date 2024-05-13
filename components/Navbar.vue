@@ -235,6 +235,16 @@ onMounted(() => {
               </div>
             </div>
           </li>
+          <!-- Carrito -->
+          <li>
+            <NuxtLink
+              to="/cart"
+              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
+              >Carrito</NuxtLink
+            >
+
+            <Icon name="uil:github" color="black" />
+          </li>
         </ul>
       </div>
     </div>
