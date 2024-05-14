@@ -3,18 +3,16 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <div class="my-16 py-16">
+  <div class="my-5 py-5 mb-56">
     <div>
-      <h2 class="text-center text-2xl font-semibold text-gray-800">
-        Inicio de Sesión
-      </h2>
+      <img src="https://cdn-icons-png.flaticon.com/512/1864/1864887.png" class="mx-auto w-40" alt=""> <br>
     </div>
-    <div class="mt-6 mx-auto w-full max-w-sm">
+    <div class="mt-1 mx-auto w-full max-w-sm">
       <form @submit.prevent="login">
         <div id="error-alert"></div>
-        <div>
-          <label for="email" class="mt-3">Correo electrónico</label>
-          <input
+        <div class="mb-3"> 
+          <label for="email" class="mt-64 ">Correo electrónico</label>
+          <div class="mt-3"><input
             id="email"
             ref="email"
             j
@@ -24,11 +22,11 @@ import { ref } from "vue";
             required="true"
             class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             @focus="hideAlert"
-          />
+          /></div> 
         </div>
         <div>
           <label for="password" class="mt-3">Contraseña</label>
-          <input
+          <div  class="mt-3"><input
             id="password"
             name="password"
             ref="password"
@@ -37,12 +35,12 @@ import { ref } from "vue";
             required="true"
             class="shadow appearance-non border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             @focus="hideAlert"
-          />
+          /></div> 
         </div>
 
         <button
           type="submit"
-          class="w-full rounded-md bg-black px-3 py-1.5 my-3 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105"
+          class="w-full rounded-md bg-black px-5 py-2.5 my-3 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-105"
         >
           Enviar
         </button>

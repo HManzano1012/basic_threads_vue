@@ -8,9 +8,9 @@ onMounted(() => {
 });
 </script>
 <template>
-  <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+  <nav class="bg-black text-white">
     <div
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 text-white bg-black"
     >
       <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img
@@ -47,17 +47,17 @@ onMounted(() => {
           />
         </svg>
       </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+      <div class="hidden w-full md:block md:w-auto bg-black" id="navbar-dropdown" >
         <ul
-          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
         >
           <li>
             <NuxtLink
               to="/"
-              class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
+              class="flex items-center w-full py-2 px-3 text-white bg-black text-white"
               aria-current="page"
             >
-              Home
+            <i class="fa-solid fa-house-user mr-2"></i>Home
             </NuxtLink>
           </li>
           <!-- Iniciar -->
@@ -68,9 +68,9 @@ onMounted(() => {
             <button
               id="dropdownNavbarLinkCategorias"
               data-dropdown-toggle="dropdownNavbarCategorias"
-              class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
+              class="flex items-center w-full py-2 px-3 text-white bg-black "
             >
-              Categorías
+            <i class="fa-solid fa-list mr-2"></i> Categorías
               <svg
                 class="w-2.5 h-2.5 ms-2.5"
                 aria-hidden="true"
@@ -87,19 +87,21 @@ onMounted(() => {
                 />
               </svg>
             </button>
+
+
             <!-- Dropdown menu -->
             <div
               id="dropdownNavbarCategorias"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              class="z-10 hidden font-normal bg-black  text-white divide-y divide-black rounded-lg shadow w-44 dark:bg-black dark:divide-black"
             >
               <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                class="py-2 text-sm text-white dark:text-gray-400"
                 aria-labelledby="dropdownLargeButton"
               >
                 <li>
                   <NuxtLink
                     to="/prendas/camisas"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="block px-4 py-2 border border-transparent hover:border-gray-300"
                   >
                     Camisas
                   </NuxtLink>
@@ -107,7 +109,7 @@ onMounted(() => {
                 <li>
                   <NuxtLink
                     to="/prendas/pantalones"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="block px-4 py-2 border border-transparent hover:border-gray-300"
                   >
                     Pantalones
                   </NuxtLink>
@@ -115,7 +117,7 @@ onMounted(() => {
                 <li>
                   <NuxtLink
                     to="/prendas/hoodies"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="block px-4 py-2 border border-transparent hover:border-gray-300"
                   >
                     Hoddies
                   </NuxtLink>
@@ -128,7 +130,7 @@ onMounted(() => {
                     data-dropdown-toggle="doubleDropdown"
                     data-dropdown-placement="right-start"
                     type="button"
-                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="flex items-center justify-between w-full px-4 py-2  border border-transparent hover:border-gray-300"
                   >
                     Temporadas<svg
                       class="w-2.5 h-2.5 ms-2.5"
@@ -148,16 +150,16 @@ onMounted(() => {
                   </button>
                   <div
                     id="doubleDropdown"
-                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                    class="z-10 hidden bg-black text-white divide-y divide-gray-100 rounded-lg shadow w-44  "
                   >
                     <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      class="py-2 text-sm text-white dark:text-white "
                       aria-labelledby="doubleDropdownButton"
                     >
                       <li>
                         <NuxtLink
                           to="/prendas/invierno"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
                         >
                           Invierno
                         </NuxtLink>
@@ -165,7 +167,7 @@ onMounted(() => {
                       <li>
                         <NuxtLink
                           to="/prendas/verano"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
                         >
                           Verano
                         </NuxtLink>
@@ -178,19 +180,21 @@ onMounted(() => {
           </li>
 
           <li>
-            <a
-              href="#"
-              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
-              >Contact</a
+            <NuxtLink
+              to="/contact"
+              class="flex items-center w-full py-2 px-3 text-white bg-black"
+              aria-current="page"
             >
+            <i class="fa-solid fa-circle-info mr-2"></i>Contacto
+            </NuxtLink>
           </li>
           <li>
             <button
               id="dropdownNavbarLinkIniciar"
               data-dropdown-toggle="dropdownNavbarIniciar"
-              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
+              class="flex items-center w-full py-2 px-3 text-white bg-black"
             >
-              Iniciar
+            <i class="fa-solid fa-door-open mr-2"></i>Iniciar
               <svg
                 class="w-2.5 h-2.5 ms-2.5"
                 aria-hidden="true"
@@ -210,37 +214,44 @@ onMounted(() => {
             <!-- Dropdown menu -->
             <div
               id="dropdownNavbarIniciar"
-              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              class="z-10 hidden font-normal bg-black rounded-lg shadow w-44 "
             >
               <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                class="py-2 text-sm text-white dark:text-gray-400 bg-black"
                 aria-labelledby="dropdownLargeButton"
               >
-                <li>
+                
                   <NuxtLink
                     to="/register"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
                   >
                     Crear Cuenta
                   </NuxtLink>
-                </li>
+                
               </ul>
-              <div class="py-1">
+
+
+              <ul
+                class="py-2 text-sm text-white dark:text-gray-400 bg-black"
+                aria-labelledby="dropdownLargeButton"
+              >
+            
                 <NuxtLink
                   to="/login"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
                 >
-                  Login
+                  Iniciar sesión
                 </NuxtLink>
-              </div>
+              </ul>
+
             </div>
           </li>
           <!-- Carrito -->
           <li>
             <NuxtLink
               to="/cart"
-              class="flex items-center w-full py-2 px-2 text-gray-900 bg-gray-50"
-              >Carrito</NuxtLink
+              class="flex items-center w-full py-2 px-3 text-white bg-black"
+              ><i class="fa-solid fa-cart-plus mr-2"></i>Carrito</NuxtLink
             >
 
             <Icon name="uil:github" color="black" />
