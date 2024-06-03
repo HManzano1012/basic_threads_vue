@@ -261,7 +261,6 @@ export default {
 
     return { config, getProducts };
   },
-  created() {},
 };
 
 function getProducts(config) {

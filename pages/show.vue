@@ -22,6 +22,14 @@
             Precio:
             <span class="text-gray-600"> ${{ config.product.Price }}</span>
           </p>
+
+          <span
+            v-for="category in String(config.product.Categories).split(',')"
+            :key="category"
+            class="text-gray-600 border border-gray-300 rounded-full px-2 py-1 text-xs mr-2 mt-2"
+          >
+            {{ category }}
+          </span>
         </div>
 
         <div class="box mt-3">
