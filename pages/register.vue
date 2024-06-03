@@ -129,7 +129,7 @@ export default {
         redirect: "follow",
       };
 
-      fetch("http://localhost:1323/register", requestOptions)
+      fetch("http://34.29.72.14:1323/register", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           let response = JSON.parse(result);

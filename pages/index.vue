@@ -275,7 +275,7 @@ function getProducts(config) {
     });
 }
 function getRecomendaciones(config) {
-  // fetch("http://localhost:1323/products")
+  // fetch("http://:1323/products")
   //   .then((response) => response.json())
   //   .then((response) => {
   //     config.products = response;

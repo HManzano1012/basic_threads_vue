@@ -94,7 +94,7 @@ export default {
 };
 
 function getProduct(config) {
-  fetch("http://localhost:1323/product/" + config.id_item)
+  fetch("http://34.29.72.14:1323/product/" + config.id_item)
     .then((response) => response.json())
     .then((response) => {
       config.product = response;

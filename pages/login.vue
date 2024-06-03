@@ -5,37 +5,46 @@ import { ref } from "vue";
 <template>
   <div class="my-5 py-5 mb-56">
     <div>
-      <img src="https://cdn-icons-png.flaticon.com/512/1864/1864887.png" class="mx-auto w-40" alt=""> <br>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1864/1864887.png"
+        class="mx-auto w-40"
+        alt=""
+      />
+      <br />
     </div>
     <div class="mt-1 mx-auto w-full max-w-sm">
       <form @submit.prevent="login">
         <div id="error-alert"></div>
-        <div class="mb-3"> 
-          <label for="email" class="mt-64 ">Correo electrónico</label>
-          <div class="mt-3"><input
-            id="email"
-            ref="email"
-            j
-            name="email"
-            type="email"
-            placeholder="Ingresa tu correo electrónico"
-            required="true"
-            class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            @focus="hideAlert"
-          /></div> 
+        <div class="mb-3">
+          <label for="email" class="mt-64">Correo electrónico</label>
+          <div class="mt-3">
+            <input
+              id="email"
+              ref="email"
+              j
+              name="email"
+              type="email"
+              placeholder="Ingresa tu correo electrónico"
+              required="true"
+              class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              @focus="hideAlert"
+            />
+          </div>
         </div>
         <div>
           <label for="password" class="mt-3">Contraseña</label>
-          <div  class="mt-3"><input
-            id="password"
-            name="password"
-            ref="password"
-            type="password"
-            placeholder="Ingresa tu contraseña"
-            required="true"
-            class="shadow appearance-non border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-            @focus="hideAlert"
-          /></div> 
+          <div class="mt-3">
+            <input
+              id="password"
+              name="password"
+              ref="password"
+              type="password"
+              placeholder="Ingresa tu contraseña"
+              required="true"
+              class="shadow appearance-non border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              @focus="hideAlert"
+            />
+          </div>
         </div>
 
         <button
@@ -73,7 +82,7 @@ export default {
         redirect: "follow",
       };
 
-      fetch("http://localhost:1323/login", requestOptions)
+      fetch("http://34.29.72.14:1323/login", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           let response = JSON.parse(result);

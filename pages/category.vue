@@ -76,7 +76,7 @@ export default {
 };
 
 function getProducts(config, id_category) {
-  fetch("http://localhost:1323/products/" + id_category)
+  fetch("http://34.29.72.14:1323/products/" + id_category)
     .then((response) => response.json())
     .then((response) => {
       config.products = response;
@@ -88,7 +88,7 @@ function getProducts(config, id_category) {
 }
 
 function getCategory(config, id_category) {
-  fetch("http://localhost:1323/categories/" + id_category)
+  fetch("http://34.29.72.14:1323/categories/" + id_category)
     .then((response) => response.json())
     .then((response) => {
       config.category = response;

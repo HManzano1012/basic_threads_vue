@@ -91,7 +91,7 @@ function updateProduct(config, quantity, product) {
 }
 
 async function getProduct(id_item, quantity, config) {
-  fetch("http://localhost:1323/product/" + id_item)
+  fetch("http://34.29.72.14:1323/product/" + id_item)
     .then((response) => response.json())
     .then((response) => {
       updateProduct(config, quantity, response);
