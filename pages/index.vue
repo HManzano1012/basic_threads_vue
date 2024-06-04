@@ -92,7 +92,7 @@
 
   <header>
     <div
-      class="relative h-[425px] overflow-hidden bg-cover bg-center bg-no-repeat"
+      class="relative h-[625px] overflow-hidden bg-cover bg-center bg-no-repeat"
     >
       <img src="/public/img/f4.jpg" class="w-full h-full object-cover" alt="" />
       <div
@@ -149,13 +149,13 @@
               </p>
               <button
                 type="button"
-                class="inline-block rounded-full bg-danger px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-dark hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:bg-black focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-danger-700 active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
+                class="inline-block rounded-full bg-dark px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#000000] transition duration-150 ease-in-out hover:bg-dark hover:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.3),0_4px_18px_0_rgba(0,0,0,0.2)] focus:bg-black focus:shadow-[0_8px_9px_-4px_rgba(0,0,0,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] focus:outline-none focus:ring-0 active:bg-dark active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.3),0_4px_18px_0_rgba(220,76,100,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(220,76,100,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(220,76,100,0.2),0_4px_18px_0_rgba(220,76,100,0.1)]"
                 data-te-ripple-init
-                data-te-ripple-color="light"
+                data-te-ripple-color="dark"
               >
                 <NuxtLink
                   to="/contact"
-                  class="flex items-center w-full py-2 px-3 text-gray-900 bg-gray-50"
+                  class="flex items-center w-full py-2 px-3 text-gray-900 "
                   aria-current="page"
                 >
                   Conocer más
@@ -167,6 +167,78 @@
       </div>
     </section>
   </div>
+
+  <!-- Categorías -->
+  <div class="bg-white mt-32 mb-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+        <h2 class="text-7xl font-bold text-black mb-10">Categorias</h2><hr><br><br>
+        <div class="mt-6 space-y-12 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-0 ">
+          <div v-for="(image, index) in images" :key="index" class="relative">
+            <a :href="image.link" class="block relative group">
+              <img class="mt-1 mb-10 rounded-lg w-full lg:w-auto h-auto" :src="image.src" :alt="image.title">
+              <div class="opacity-0 absolute inset-0 flex justify-center items-center transition duration-300 bg-black bg-opacity-75 group-hover:opacity-100">
+                <h3 class="text-white text-center">{{ image.title }}</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Productos Destacados -->
+
+    <div class="container">
+    <h2 class="mb-10 mt-10 text-7xl font-bold">
+                <span class="text-danger dark:text-danger-500"
+                  >Productos Destacados</span
+                >
+                
+              </h2><hr><br><br><br>
+    <div class="flex font-sans" v-for="product in config.products" :key="product.ID">
+    <div class="flex-none w-48 relative">
+      <NuxtLink :to="{ path: 'show', query: { item_id: product.ID } }">
+        <img :src="'/img/' + product.Image" :alt="product.Name" class="h-60 w-full object-cover object-center cursor-pointer" />
+      </NuxtLink>
+    </div>
+    <form class="flex-auto p-6">
+      <div class="flex flex-wrap">
+        <h1 class="flex-auto text-lg font-semibold text-slate-900">{{ product.Name }}</h1>
+        <div class="text-lg font-semibold text-slate-500">${{ product.Price }}</div>
+        <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">En existencia</div>
+      </div>
+      <div class="flex items-baseline mt-4 mb-6 pb-6 border-b border-slate-200">
+        <div class="space-x-2 flex text-sm">
+          <label v-for="size in ['XS', 'S', 'M', 'L', 'XL']" :key="size">
+            <input class="sr-only peer" name="size" type="radio" :value="size.toLowerCase()" :checked="size === 'XS'" />
+            <div class="w-9 h-9 rounded-lg flex items-center justify-center text-slate-700 peer-checked:font-semibold peer-checked:bg-slate-900 peer-checked:text-white">
+              {{ size }}
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="flex space-x-4 mb-6 text-sm font-medium">
+        <div class="flex-auto flex space-x-4">
+          <button class="h-10 px-6 font-semibold rounded-md bg-black text-white" type="submit">
+            <NuxtLink :to="{ path: 'show', query: { item_id: product.ID } }" class="n-link-base flex items-center justify-center transition-transform hover:scale-105">
+              Comprar
+            </NuxtLink>
+          </button>
+          <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900" type="button">
+            Agregar al Carrito
+          </button>
+        </div>
+        
+      </div>
+      
+    </form>
+  </div>
+</div>
+
+
+
+
 
   <!-- Cards -->
   <div class="container mx-auto px-4 py-12 mt-12">
@@ -202,8 +274,51 @@
     </div>
     <hr />
 
+
+     <!-- SECTION -->
+    <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 mt-64">
+    <NuxtLink to="/pagina1" class="relative group">
+      <img src="/img/camisa3.jpg" alt="Camisa 1" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Camisa 1
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/pagina2" class="relative group col-start-2">
+      <img src="/img/pantalon1.jpg" alt="Camisa 3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Camisa 3
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/pagina3" class="relative group">
+      <img src="/img/camisa6.jpg" alt="Hoodie 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Hoodie 2
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/pagina4" class="relative group">
+      <img src="/img/camisa3.jpg" alt="Pantalón 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Pantalón 2
+      </div>
+    </NuxtLink>
+    <NuxtLink to="/pagina5" class="relative group row-start-1 col-start-2 col-span-2">
+      <img src="/img/f3.jpg" alt="Imagen F3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg rounded-lg">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        Imagen F3
+      </div>
+    </NuxtLink>
+    
+  </div>
+
+
+
+
     <!-- Recomendaciones -->
-    <div class="bg-gray-100">
+
+
+<div class="">
+
+    <div class="bg-gray-100 mt-64 mb-64 p-10">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-5">
         <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
           <h2 class="text-2xl font-bold text-gray-900">Recomendaciones</h2>
@@ -234,6 +349,10 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
 </template>
 
 <style>
@@ -261,6 +380,21 @@ export default {
 
     return { config, getProducts };
   },
+
+  data() {
+    return {
+      images: [
+        { src: '/img/f2.jpg', title: 'Camisas', link: '/prendas/camisas' },
+        { src: '/img/f2.jpg', title: 'Pantalones', link: '/prendas/pantalones' },
+        { src: '/img/f3.jpg', title: 'Hoddies', link: '/prendas/hoodies' },
+        { src: '/img/f3.jpg', title: 'Título de la imagen 1', link: '/ruta-a-la-pagina-1' },
+        
+        
+      ]
+    }
+  }
+
+
 };
 
 function getProducts(config) {
@@ -304,7 +438,15 @@ function getRecomendaciones(config) {
   ];
 
   config.recomendaciones = recomendaciones;
+
+
+  
+
+  
 }
+
+  
+
 
 import { XMarkIcon } from "@heroicons/vue/20/solid";
 </script>
