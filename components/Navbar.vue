@@ -201,7 +201,7 @@ export default {
 };
 
 function getCategories(config) {
-  fetch("http://34.29.72.14:1323/categories")
+  fetch("https://34.29.72.14:1323/categories")
     .then((response) => response.json())
     .then((response) => {
       config.categories = response;
