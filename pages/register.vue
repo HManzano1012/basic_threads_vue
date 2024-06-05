@@ -27,7 +27,7 @@ const agreed = ref(false);
       @submit="register"
       id="register-form"
     >
-      <div id="error-alert"></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 " id="error-alert"></div>
       <div class="mt-2.5 w-full">
         <label for="name">Nombres</label>
         <input

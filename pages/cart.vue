@@ -1,13 +1,13 @@
 <template>
-  <div class="max-w-5xl mx-auto p-4 mt-24">
+  <div class="max-w-5xl mx-auto p-4 mt-10">
     <div class="bg-gray flex rounded-lg overflow-hidden p-4 mt-4 mb-12">
       <div class="items-center align-middle py-9 mx-auto w-full">
         <div class="w-full rounded-lg cursor-pointer bg-white">
           <div
-            class="my-5 text-xl flex items-end w-full border border-white border-b-gray-500 text-gray-500 font-semibold"
+            class="my-5 text-xl flex items-end w-full border border-white   text-gray-500 font-semibold"
           >
             <span>Mi carrito </span>
-          </div>
+          </div><hr><br><br>
           <div v-if="config.cart_products.length > 0">
             <div
               v-for="product in config.cart_products"
@@ -35,12 +35,29 @@
                   </p>
                 </div>
               </div>
-            </div>
+            </div><br><br><hr>
             <div
-              class="my-5 text-xl text-right w-full border border-white border-t-gray-500 text-gray-500 font-semibold"
+              class="my-5 text-xl text-right w-full text-6x1 border border-white  text-black font-semibold "
             >
               Total a pagar: ${{ config.cart_total }}
             </div>
+
+            <NuxtLink
+            to="/buy"
+            class="flex items-center w-full py-2 px-3 text-gray-900"
+            aria-current="page"
+          >
+            <div class=" w-full">
+              <button class="w-full bg-white text-black font-bold py-8 px-16 text-2xl rounded-lg shadow-lg " >
+                Realizar Compra
+              </button>
+            </div>
+          </NuxtLink>
+
+
+           
+
+
           </div>
           <div v-else class="text-center">No hay nada que mostrar</div>
         </div>
