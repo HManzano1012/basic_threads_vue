@@ -57,6 +57,21 @@ const agreed = ref(false);
           />
         </div>
       </div>
+      <div class="sm:col-span-2">
+        <div class="mt-2.5">
+          <label for="password">Clave</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            ref="password"
+            placeholder="Ingresa tu clave"
+            required
+            class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            @focus="hideAlert"
+          />
+        </div>
+      </div>
 
       <div class="sm:col-span-2">
         <div class="mt-2.5">
@@ -101,8 +116,9 @@ export default {
       let name = this.$refs.name.value;
       let email = this.$refs.email.value;
       let phone = this.$refs.phone.value;
+      let clave = this.$refs.password.value;
 
-      if (!name || !email || !phone) {
+      if (!name || !email || !phone || !clave) {
         document.getElementById("error-alert").innerHTML =
           '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error:</strong><span class="block sm:inline"> Todos los campos son requeridos.</span></div>';
         return;
@@ -122,6 +138,7 @@ export default {
       formdata.append("name", name);
       formdata.append("email", email);
       formdata.append("phone", phone);
+      formdata.append("password", clave);
 
       const requestOptions = {
         method: "POST",
