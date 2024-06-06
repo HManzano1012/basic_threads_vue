@@ -87,8 +87,18 @@ export default {
         .then((result) => {
           let response = JSON.parse(result);
           if (response.status == "success") {
-            localStorage.setItem("token", response.token);
-            this.$router.push("/");
+            document.cookie = `token=${response.token}`;
+            fetch("http://34.29.72.14:1323/getuser", {
+              method: "POST",
+              body: formdata,
+              redirect: "follow",
+            })
+              .then((response) => response.json())
+              .then((response) => {
+                document.cookie = `user=${response}`;
+                console.log(document.cookie);
+              });
+            window.location.href = "/";
           } else {
             let alert =
               '<div class="flex items-center bg-red-400 text-white text-sm font-bold px-4 py-3" role="alert">\

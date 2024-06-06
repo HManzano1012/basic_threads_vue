@@ -112,7 +112,10 @@
               <i class="fa-solid fa-circle-info mr-2"></i>Contacto
             </NuxtLink>
           </li>
-          <li>
+          <li v-if="config.isLogged" class="py-2">
+            {{ config.username }}
+          </li>
+          <li v-if="!config.isLogged">
             <button
               id="dropdownNavbarLinkIniciar"
               data-dropdown-toggle="dropdownNavbarIniciar"
@@ -170,8 +173,8 @@
             <NuxtLink
               to="/cart"
               class="flex items-center w-full py-2 px-3 text-white bg-black"
-              ><i class="fa-solid fa-cart-plus mr-2"></i>Carrito</NuxtLink
-            >
+              ><i class="fa-solid fa-cart-plus mr-2"></i
+            ></NuxtLink>
 
             <Icon name="uil:github" color="black" />
           </li>
@@ -186,16 +189,20 @@ import { ref, onMounted } from "vue";
 export default {
   props: {
     categories: Object,
+    isLogged: Boolean,
+    username: String,
   },
   setup() {
     const config = ref({
       categories: [],
+      isLogged: false,
     });
     onMounted(() => {
       getCategories(config.value);
+      getIsLogged(config.value);
     });
 
-    return { config, getCategories };
+    return { config, getIsLogged, getCategories };
   },
   created() {},
 };
@@ -211,5 +218,16 @@ function getCategories(config) {
     .catch((error) => {
       console.error("Error:", error);
     });
+}
+
+function getIsLogged(config) {
+  let isl = document.cookie.includes("token");
+  let cookies = document.cookie.split(";");
+  let username = "";
+  if (isl) {
+    config.isLogged = true;
+    username = cookies.find((cookie) => cookie.includes("user"));
+    config.username = username.split("=")[1];
+  }
 }
 </script>
