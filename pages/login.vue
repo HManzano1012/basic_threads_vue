@@ -19,7 +19,6 @@ import { ref } from "vue";
             <input
               id="email"
               ref="email"
-              j
               name="email"
               type="email"
               placeholder="Ingresa tu correo electrónico"

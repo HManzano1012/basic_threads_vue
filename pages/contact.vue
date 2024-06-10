@@ -238,7 +238,7 @@
             </div>
           </div>
           <div class="mx-auto max-w-[700px] mt-24">
-            <form @submit.prevent="submitForm">
+            <form method="POST" @submit.prevent="submitForm" id="test">
               <div class="mb-6">
                 <label
                   for="nombre"
@@ -325,38 +325,40 @@
 import { ref } from "vue";
 export default {
   setup() {
-    return { submitForm };
+    return {};
+  },
+
+  methods: {
+    submitForm() {
+      let email = this.$refs.correo.value;
+      let name = this.$refs.nombre.value;
+      let message = this.$refs.mensaje.value;
+
+      if (!name || !email || !message) {
+        document.getElementById("error-alert").innerHTML =
+          '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error:</strong><span class="block sm:inline"> Todos los campos son requeridos.</span></div>';
+        return;
+      }
+
+      let formdata = new FormData();
+      formdata.append("name", name);
+      formdata.append("email", email);
+      formdata.append("message", message);
+
+      const requestOptions = {
+        method: "POST",
+        body: formdata,
+        redirect: "follow",
+      };
+      fetch("http://34.29.72.14:1323/contactform", requestOptions)
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
   },
 };
-
-function submitForm() {
-  let name = this.$refs.nombre.value;
-  let email = this.$refs.correo.value;
-  let message = this.$refs.mensaje.value;
-
-  if (!name || !email || !message) {
-    document.getElementById("error-alert").innerHTML =
-      '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert"><strong class="font-bold">Error:</strong><span class="block sm:inline"> Todos los campos son requeridos.</span></div>';
-    return;
-  }
-
-  fetch("http://localhost:1323/contactform", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      message: message,
-    }),
-  })
-    .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
-}
 </script>
