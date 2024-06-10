@@ -94,16 +94,16 @@
     <div
       class="relative h-[625px] overflow-hidden bg-cover bg-center bg-no-repeat"
     >
-      <img src="/public/img/f4.jpg" class="w-full h-full object-cover" alt="" />
+      <img src="/public/img/f4.jpg" class="w-full h-full object-cover bg-fixed"  alt="" />
       <div
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed"
       >
         <div class="flex h-full items-center justify-center">
           <div class="px-6 text-center text-white md:px-12">
-            <h1 class="mb-10 text-5xl font-bold">Basic Threads</h1>
+            <h1 class="mb-10 text-8xl font-bold">Basic Threads</h1>
             <button
               type="button"
-              class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+              class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-3x1 font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
               data-twe-ripple-init
               data-twe-ripple-color="light"
             >
@@ -216,6 +216,50 @@
   </div>
 </div>
 
+
+
+     <!-- SECTION -->
+     <div class="container">
+      <h2 class="text-7xl font-bold text-black mb-10">Colecciones </h2><hr>
+    <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 mt-32 mb-64">
+
+      <NuxtLink to="" class="relative group">
+        <img src="/img/mo1.jpg" alt="Camisa 1" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 ">
+          Camisa 1
+        </div>
+      </NuxtLink>
+      <NuxtLink to="" class="relative group col-start-2">
+        <img src="/img/mo2.jpg" alt="Camisa 3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 ">
+          Camisa 3
+        </div>
+      </NuxtLink>
+      <NuxtLink to="" class="relative group">
+        <img src="/img/mo6.jpg" alt="Hoodie 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 ">
+          Hoodie 2
+        </div>
+      </NuxtLink>
+      <NuxtLink to="" class="relative group">
+        <img src="/img/mo4.jpg" alt="Pantalón 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 ">
+          Pantalón 2
+        </div>
+      </NuxtLink>
+      <NuxtLink to="" class="relative group row-start-1 col-start-2 col-span-2">
+        <img src="/img/mo3.jpg" alt="Imagen F3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg rounded-lg">
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 ">
+          Imagen F3
+        </div>
+      </NuxtLink>
+    
+    </div>
+
+
+
+
+
     <!-- Productos Destacados -->
     <div class="container">
     <h2 class="mb-8 sm:mb-10 text-4xl sm:text-7xl font-bold">
@@ -262,7 +306,7 @@
 
 
 <!-- Poster -->
-<div class="relative overflow-hidden bg-white">
+<div class="relative overflow-hidden mt-64 bg-white">
     <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
       <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
         <div class="sm:max-w-lg">
@@ -318,41 +362,7 @@
 
 
 
-     <!-- SECTION -->
-     <div class="container">
-    <div class="grid grid-flow-col grid-rows-2 grid-cols-3 gap-8 mt-64">
-      <NuxtLink to="/pagina1" class="relative group">
-        <img src="/img/camisa3.jpg" alt="Camisa 1" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Camisa 1
-        </div>
-      </NuxtLink>
-      <NuxtLink to="/pagina2" class="relative group col-start-2">
-        <img src="/img/pantalon1.jpg" alt="Camisa 3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Camisa 3
-        </div>
-      </NuxtLink>
-      <NuxtLink to="/pagina3" class="relative group">
-        <img src="/img/camisa6.jpg" alt="Hoodie 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg p-5">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Hoodie 2
-        </div>
-      </NuxtLink>
-      <NuxtLink to="/pagina4" class="relative group">
-        <img src="/img/camisa3.jpg" alt="Pantalón 2" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Pantalón 2
-        </div>
-      </NuxtLink>
-      <NuxtLink to="/pagina5" class="relative group row-start-1 col-start-2 col-span-2">
-        <img src="/img/f3.jpg" alt="Imagen F3" loading="lazy" class="transition-shadow duration-300 ease-in-out shadow-none group-hover:shadow-lg rounded-lg">
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Imagen F3
-        </div>
-      </NuxtLink>
-    
-    </div>
+
   </div>
 
 
@@ -360,9 +370,9 @@
     <!-- Recomendaciones -->
 
 
-    <div class="bg-gray-100 mt-64 mb-64 ">
+    <div class="bg-gray-100 mt-64 mb-64 p-32">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-5">
-        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-10">
+        <div class="mx-auto max-w-2xl  py-16 sm:py-24 lg:max-w-none lg:py-10">
           <h2 class="text-4xl font-bold text-gray-900 mb-4">Recomendaciones</h2><hr><br><br>
 
           <div
@@ -393,40 +403,13 @@
 
 
 
-    <div class="relative isolate overflow-hidden bg-gray-600 py-16 sm:py-24 lg:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-        <div class="max-w-xl lg:max-w-lg">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Subscribe to our newsletter.</h2>
-          <p class="mt-4 text-lg leading-8 text-gray-300">Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt dolore.</p>
-          <div class="mt-6 flex max-w-md gap-x-4">
-            <label for="email-address" class="sr-only">Email address</label>
-            <input id="email-address" name="email" type="email" autocomplete="email" required="" class="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6" placeholder="Enter your email" />
-            <button type="submit" class="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Subscribe</button>
-          </div>
-        </div>
-        <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-          <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-              <CalendarDaysIcon class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
-            <dt class="mt-4 font-semibold text-white">Weekly articles</dt>
-            <dd class="mt-2 leading-7 text-gray-400">Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.</dd>
-          </div>
-          <div class="flex flex-col items-start">
-            <div class="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
-              <HandRaisedIcon class="h-6 w-6 text-white" aria-hidden="true" />
-            </div>
-            <dt class="mt-4 font-semibold text-white">No spam</dt>
-            <dd class="mt-2 leading-7 text-gray-400">Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-    <div class="absolute left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-      <div  />
-    </div>
-  </div>
+
+
+
+
+
+
+
 </template>
 
 <style>
@@ -448,13 +431,21 @@ export default {
   props: {
     products: Object,
     recomendaciones: Object,
+    posts:Object,
   },
   setup() {
     
     const config = ref({
       products: [],
       recomendaciones: [],
+
     });
+
+
+
+
+
+
     onMounted(() => {
       getProducts(config.value);
       getRecomendaciones(config.value);
@@ -526,9 +517,13 @@ function getRecomendaciones(config) {
     },
   ];
 
+  
+
+
   config.recomendaciones = recomendaciones;
 
 
+  
   
 
   

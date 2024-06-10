@@ -3,21 +3,17 @@ import { ref } from "vue";
 </script>
 
 <template>
-  <div class="my-5 py-5 mb-56">
-    <div>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/1864/1864887.png"
-        class="mx-auto w-40"
-        alt=""
-      />
+  <div class="my-20 py-5 mb-24">
+    <div class="flex flex-col justify-center items-center mt-10">
+     <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Iniciar Sesión</h1>
       <br />
     </div>
-    <div class="mt-1 mx-auto w-full max-w-sm">
+    <div class="mt-5 mx-auto w-full max-w-sm">
       <form @submit.prevent="login">
         <div id="error-alert"></div>
         <div class="mb-3">
           <label for="email" class="mt-64">Correo electrónico</label>
-          <div class="mt-3">
+          <div class="mt-1">
             <input
               id="email"
               ref="email"
@@ -33,13 +29,13 @@ import { ref } from "vue";
         </div>
         <div>
           <label for="password" class="mt-3">Contraseña</label>
-          <div class="mt-3">
+          <div class="mt-1">
             <input
               id="password"
               name="password"
               ref="password"
               type="password"
-              placeholder="Ingresa tu contraseña"
+              placeholder="*******"
               required="true"
               class="shadow appearance-non border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               @focus="hideAlert"

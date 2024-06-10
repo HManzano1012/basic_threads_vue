@@ -87,16 +87,16 @@
             <!-- Dropdown menu -->
             <div
               id="multi-dropdown"
-              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+              class="z-10 hidden bg-black divide-y divide-gray-100 border-white hover:border-white rounded-lg shadow w-44 dark:bg-black "
             >
               <ul
-                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                class="py-2 text-sm text-white rounded-lg dark:text-gray-200 border-white hover:border-gray-300"
                 aria-labelledby="multiLevelDropdownButton"
               >
                 <li v-for="category in config.categories" :key="category.ID">
                   <a
                     :href="'category?category_id=' + category.ID"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="block px-4 py-2 hover:bg-black dark:hover:bg-black rounded-lg dark:hover:text-white border border-transparent hover:border-gray-300"
                     >{{ category.Name }}</a
                   >
                 </li>
@@ -123,7 +123,7 @@
             >
               <i class="fa-solid fa-door-open mr-2"></i>Iniciar
               <svg
-                class="w-2.5 h-2.5 ms-2.5"
+                class="w-2.5 h-2.5 ms-2.5 rounded-lg"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -144,24 +144,24 @@
               class="z-10 hidden font-normal bg-black rounded-lg shadow w-44"
             >
               <ul
-                class="py-2 text-sm text-white dark:text-gray-400 bg-black"
+                class="py-2 text-sm text-white dark:text-gray-400 rounded-lg bg-black"
                 aria-labelledby="dropdownLargeButton"
               >
                 <NuxtLink
                   to="/register"
-                  class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
+                  class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border rounded-lg border-transparent hover:border-gray-300"
                 >
                   Crear Cuenta
                 </NuxtLink>
               </ul>
 
               <ul
-                class="py-2 text-sm text-white dark:text-gray-400 bg-black"
+                class="py-2 text-sm text-white dark:text-gray-400 rounded-lg bg-black"
                 aria-labelledby="dropdownLargeButton"
               >
                 <NuxtLink
                   to="/login"
-                  class="block px-4 py-2 hover:bg-black dark:hover:bg-black dark:hover:text-white border border-transparent hover:border-gray-300"
+                  class="block px-4 py-2 hover:bg-black dark:hover:bg-black rounded-lg dark:hover:text-white border border-transparent hover:border-gray-300"
                 >
                   Iniciar sesión
                 </NuxtLink>
@@ -172,7 +172,7 @@
           <li>
             <NuxtLink
               to="/cart"
-              class="flex items-center w-full py-2 px-3 text-white bg-black"
+              class="flex items-center w-full py-2 mt-1 px-3 text-white bg-black"
               ><i class="fa-solid fa-cart-plus mr-2"></i
             ></NuxtLink>
 
