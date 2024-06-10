@@ -100,10 +100,10 @@
       >
         <div class="flex h-full items-center justify-center">
           <div class="px-6 text-center text-white md:px-12">
-            <h1 class="mb-10 text-8xl font-bold">Basic Threads</h1>
+            <h1 class="mb-10 text-7xl font-bold">Basic Threads</h1>
             <button
               type="button"
-              class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-3x1 font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
+              class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-2x1 font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-300 hover:text-neutral-200 focus:border-neutral-300 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-300 active:text-neutral-200 dark:hover:bg-neutral-600 dark:focus:bg-neutral-600"
               data-twe-ripple-init
               data-twe-ripple-color="light"
             >
