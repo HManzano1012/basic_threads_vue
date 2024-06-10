@@ -87,7 +87,7 @@
             <!-- Dropdown menu -->
             <div
               id="multi-dropdown"
-              class="z-10 hidden bg-black divide-y divide-gray-100 border-white hover:border-white rounded-lg shadow w-44 dark:bg-black "
+              class="z-10 hidden bg-black divide-y divide-gray-100 border-white hover:border-white rounded-lg shadow w-44 dark:bg-black"
             >
               <ul
                 class="py-2 text-sm text-white rounded-lg dark:text-gray-200 border-white hover:border-gray-300"

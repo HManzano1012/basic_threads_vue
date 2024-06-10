@@ -5,10 +5,8 @@ import { ChevronDownIcon } from "@heroicons/vue/20/solid";
 const agreed = ref(false);
 </script>
 
-
-
 <template>
-  <div class="isolate px-6 bg-fixed-custom  py-14 mx-auto mt-20 mb-24">
+  <div class="isolate px-6 bg-fixed-custom py-14 mx-auto mt-20 mb-24">
     <div
       class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
       aria-hidden="true"
@@ -16,26 +14,28 @@ const agreed = ref(false);
       <div class="" />
     </div>
 
-
-
-    <div class="flex flex-col justify-center items-center  bg-gray-100 mx-auto mt-5 max-w-7xl ">
-      
-
+    <div
+      class="flex flex-col justify-center items-center mx-auto mt-5 max-w-7xl"
+    >
       <form
         method="POST"
         class="sm:w-2/3"
         @submit="register"
         id="register-form"
       >
-
-      <div class="mx-auto max-w-2xl text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Crea una cuenta
-      </h2>
-      <p class="mt-2 text-lg leading-8 text-gray-600">
-        Es importante crear una cuenta para la compra de productos!
-      </p><br><hr><br>
-    </div>
+        <div class="mx-auto max-w-2xl text-center">
+          <h2
+            class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            Crea una cuenta
+          </h2>
+          <p class="mt-2 text-lg leading-8 text-gray-600">
+            Es importante crear una cuenta para la compra de productos!
+          </p>
+          <br />
+          <hr />
+          <br />
+        </div>
 
         <div class="" id="error-alert"></div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -100,14 +100,16 @@ const agreed = ref(false);
           </div>
         </div>
         <div class="mt-2">
-          <hr>
+          <hr />
           <button
             type="submit"
             class="block w-full rounded-md bg-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-black focus-visible:outline"
           >
             Enviar
           </button>
-        </div><br><hr>
+        </div>
+        <br />
+        <hr />
         Ya tienes una cuenta?
         <NuxtLink to="/login" class="text-blue-400 hover:text-gray-400">
           ¡Inicia sesion!
@@ -116,7 +118,6 @@ const agreed = ref(false);
     </div>
   </div>
 </template>
-
 
 <script>
 export default {

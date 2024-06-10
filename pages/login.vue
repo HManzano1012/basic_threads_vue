@@ -5,7 +5,9 @@ import { ref } from "vue";
 <template>
   <div class="my-20 py-5 mb-24">
     <div class="flex flex-col justify-center items-center mt-10">
-     <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Iniciar Sesión</h1>
+      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Iniciar Sesión
+      </h1>
       <br />
     </div>
     <div class="mt-5 mx-auto w-full max-w-sm">
