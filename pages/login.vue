@@ -95,7 +95,7 @@ export default {
                 document.cookie = `user=${response}`;
                 console.log(document.cookie);
               });
-            window.location.href = "/";
+            // window.location.reload();
           } else {
             let alert =
               '<div class="flex items-center bg-red-400 text-white text-sm font-bold px-4 py-3" role="alert">\

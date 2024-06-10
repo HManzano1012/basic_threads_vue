@@ -221,13 +221,23 @@ function getCategories(config) {
 }
 
 function getIsLogged(config) {
-  let isl = document.cookie.includes("token");
+  let cookie_string = document.cookie;
+  let isl = cookie_string.includes("token");
+  console.log(isl);
   let cookies = document.cookie.split(";");
   let username = "";
   if (isl) {
     config.isLogged = true;
-    username = cookies.find((cookie) => cookie.includes("user"));
-    config.username = username.split("=")[1];
+
+    let cookie = document.cookie.split(";");
+    console.log(cookie);
+    for (let i = 0; i < cookie.length; i++) {
+      if (cookie[i].includes("user")) {
+        username = cookie[i].split("=")[1];
+        config.username = username;
+        console.log(username);
+      }
+    }
   }
 }
 </script>
